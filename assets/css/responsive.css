@@ -1,0 +1,101 @@
+/*PC*/
+@media (min-width: 1024px) { /*chỉ số cho PC >= 1024px*/
+
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+
+    .btn {
+        padding: 16px 16px;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+
+    .contact-form .form-control {
+        padding: 15px;
+    }
+
+    #footer .socials-list {
+        font-size: 36px;
+        margin: 0 8px 8px;
+    }   
+
+    #footer .copyright a {
+        padding: 15px 0;
+    }
+
+}
+
+/*Tablet ( Ipad )*/
+@media (max-width: 1023px) and (min-width: 740px) { /*talet (ipad) 704 -> 1023ỡ*/
+    
+}
+
+/*Mobile*/
+@media (max-width: 739px) { /*mobile <= 739px*/
+    .s-full-width,
+    .mobile-s-col-full {
+        width: 100%;
+    }
+
+    .s-mt-8 { /* s là size nhỏ (mobile),m size vừa (tablet ipad),l size lớn (pc) */
+        margin-top: 8px;
+    }
+
+    #header {
+        overflow: hidden; /*mặc định thẻ div là overflow visible cho phép con của thẻ cha tràn ra sửa thành hidden để nó ẩn đi những thẻ con tràn ra (Trường hợp này để làm menu header trên mobile) */
+    }
+
+    #header .mobile-menu-btn{
+        display: block;
+    }
+
+    #header .search-btn {
+        display:none;
+    }
+    
+    #nav {
+        display: block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    .subnav-mobile {
+
+    }
+
+    #nav > li {
+        display: block; /*để các item trên thanh header chuyển thành nằm dọc do ghi đè lên display inline-block*/
+    }
+
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #content .mobile-member-item {
+        width: 100%;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    #contact .contact-form {
+        margin-top: 32px;
+    }
+    
+}

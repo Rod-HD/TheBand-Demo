@@ -47,8 +47,8 @@ html {
 }
 
 .row {
-     margin-top: -8px;
-     margin-bottom: -8px;   
+     margin-left: -8px;
+     margin-right: -8px;   
 }
 
 .mt-8 {
@@ -88,7 +88,7 @@ html {
 
 } */
 
-#header{
+#header {
     height: 46px;
     background-color: #000;
     position: fixed;
@@ -121,6 +121,7 @@ html {
 #nav li:hover .subnav {
     display: block; /*block mạnh hơn none nên khi hover block sẽ hủy none, block tạo khối, none: không có gì*/
 }
+
 #nav .subnav {
     display: none;
     background-color: #fff;
@@ -148,7 +149,7 @@ html {
     text-decoration: none; /*bỏ gạch chân */
     line-height: 46px;
     padding: 0 24px;  
-    display: inline-block; /* mặc định thẻ a là inline không đặt được size ngang và dọc nên dùng inline-block để xét size, nhưng thông thường mặc định nó sẽ ăn theo nhưng do thẻ a có display inline*/
+    display: block; /* mặc định thẻ a là inline không đặt được size ngang và dọc nên dùng inline-block để xét size, nhưng thông thường mặc định nó sẽ ăn theo nhưng do thẻ a có display inline*/
 }
 
 
@@ -158,6 +159,14 @@ html {
     background-color: #ccc;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right; 
     padding: 0 21px;
@@ -168,6 +177,15 @@ html {
     background-color: #f44336;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -210,9 +228,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -291,7 +312,7 @@ html {
 
 /* .Places */ 
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 0;
     /* padding-bottom: 48px; */
 }
@@ -463,6 +484,15 @@ html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 530;
+}
+
+#contact .contact-info a {
+    color: #101aef;
+    opacity: 0.7;
+}
+
+#contact .contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-info i[class*="ti-"] { /*class*="ti-" thể hiện tìm thẻ i trong contact-info có chuỗi "ti-" trong class*/
