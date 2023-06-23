@@ -196,7 +196,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%; /*khi sau padding là % thì 50% ở đây là 50% kích thước chiều ngang của nó*/
-    background: url(/assets/img/slide/slide3.jpg) top center / cover no-repeat;
+    background: url(/assets/img/slide/slide1.jpg) top center / cover no-repeat;
 }
 
 #slider .text-content {
