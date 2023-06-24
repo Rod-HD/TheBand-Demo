@@ -167,7 +167,7 @@
         </div>
 
 
-        
+
 
         <!-- Begin Footer -->
         <div id="footer">
@@ -264,7 +264,7 @@
         var header= document.getElementById('header');
         var mobileMenu= document.getElementById('mobile-menu');
         var headerHeight = header.clientHeight;
-    
+        //console.log(headerHeight);
         // Đóng mở mobile menu
         mobileMenu.onclick= function() {
             var isClosed = header.clientHeight === headerHeight;
@@ -281,32 +281,26 @@
         // a[href*="#"] là chọn các thẻ a theo đường dẫn trong đó href có #, vì ở ngoài dùng nháy đơn ' ' rồi nên ở trong phải dùng dấu kép " "
         // console.log(menuItems); // kiểm tra đã tạo được menuitems thành công chưa ở console
         var subNav = document.querySelector('#nav .subnav');
-
+        
         for (var i= 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-
-            var count = 0;
-            menuItem.onclick= function(event) {
+        
+            menuItem.onclick= function(event) { 
+              
                 // console.log(this);// this ở đây là đang chỉ chính nó, vì đang muốn kiểm tra mỗi lần ấn vào sẽ in ra nó nên dùng this để chỉ chính nó, nếu dùng tên biến của nó là menuItem sẽ không được
                 var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
                 if (isParentMenu) {
-                    event.preventDefault();
-                    count = count + 1; // mỗi lần click vào More sẽ đếm, click lần đầu sẽ mở, nên sẽ để mở khi count chẵn
+                    //event.preventDefault(); // mỗi lần click vào More sẽ đếm, click lần đầu sẽ mở, nên sẽ để mở khi count chẵn
                     //event.preventDefault();
-                    if (count % 2 == 0) {
-                        //subNav.style.position = 'absolute'; // khi chẵn thì đóng form của More
-                        subNav.style.display = 'none';
-                    } else {
-                        //subNav.style.position = 'initial';
-                        subNav.style.display = null; 
-
-                    }
-                } else {
+                    //event.prevenDefault();
+                }
+                else {
                 header.style.height = null; // để reset height về 46px cho height ẩn đi hay tắt menu đi
                 //subNav.style.display = 'none';
                 }
             }
         }
+        
         
 
     </script>
